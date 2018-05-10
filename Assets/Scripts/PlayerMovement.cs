@@ -106,6 +106,11 @@ public class PlayerMovement : MonoBehaviour {
                 audioSource.Play();
             }
         }
+        else
+        {
+            //cannot flip
+            canFlip = false;
+        }
         UpdateGUICharge();
 
     }
@@ -155,11 +160,11 @@ public class PlayerMovement : MonoBehaviour {
 
     private void PlayerTurnsRedWhenOutofGravity()
     {
-        if(currentChargeLevel == 0)
+        if(currentChargeLevel <= 0 || !canFlip)
         {
             spriteRenderer.color = Color.red;
         }
-        else if(currentChargeLevel > 0)
+        else if(currentChargeLevel > 0 || canFlip)
         {
             spriteRenderer.color = Color.white;
         }

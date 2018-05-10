@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Coin : MonoBehaviour
 {
+    public float respawnTime = 5f;
+
     static int coinCount = 0;
 
     private Text coinCountText;
@@ -61,8 +63,16 @@ public class Coin : MonoBehaviour
             UpdateCoinText();
             spriteRenderer.enabled = false;
             boxCollider2D.enabled = false;
+            StartCoroutine(RespawnPickupTime());
         }
 
 
+    }
+
+    private IEnumerator RespawnPickupTime()
+    {
+        yield return new WaitForSeconds(respawnTime);
+        spriteRenderer.enabled = true;
+        boxCollider2D.enabled = true;
     }
 }
