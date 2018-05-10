@@ -58,7 +58,7 @@ public class Checkpoint : MonoBehaviour
         
         isActive = true;
         currentlyActiveCheckpoint = this;
-        Instantiate(checkpointParticles, transform.position, Quaternion.identity);
+        //Instantiate(checkpointParticles, transform.position, Quaternion.identity);
         StartCoroutine(CallCheckpointTextAnim());
         //StartCoroutine(ParticleEffectStopPlaying());
         checkpointParticles.Play();
