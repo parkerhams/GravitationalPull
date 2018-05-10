@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Tiled2Unity generated xml data-->
+<!--Do not modify by hand-->
+<!--Last exported: 10/23/2017 6:03:06 AM-->
+<Tiled2Unity version="1.0.13.0">
+  <AssignMaterial mesh="Block1_mesh_0001" material="omegateam" />
+  <Prefab name="Block1" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="1" numTilesWide="100" numTilesHigh="100" tileWidth="16" tileHeight="16" exportScale="0.03125" mapWidthInPixels="1600" mapHeightInPixels="1600" backgroundColor="#808080">
+    <GameObject name="Tile Layer 1" x="0" y="0" z="0">
+      <TileLayer offsetX="0" offsetY="0" />
+      <GameObject name="omegateam" x="0" y="0" mesh="Block1_mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
+      <GameObject name="Collision">
+        <PolygonCollider2D>
+          <Path>20,-23.5 18.5,-23.5 18.5,-25 20,-25</Path>
+          <Path>19.5,-24.5 19,-24.5 19,-24 19.5,-24</Path>
+        </PolygonCollider2D>
+      </GameObject>
+    </GameObject>
+  </Prefab>
+  <ImportMesh filename="Block1_mesh_0001.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ0Jsb2NrMV9tZXNoXzAwMDEub2JqJw0KDQojIFZlcnRpY2VzIChDb3VudCA9IDM2KQ0KdiAtMTguNSAtMjQgMA0KdiAtMTkgLTI0IDANCnYgLTE5IC0yMy41IDANCnYgLTE4LjUgLTIzLjUgMA0KdiAtMTkgLTI0IDANCnYgLTE5LjUgLTI0IDANCnYgLTE5LjUgLTIzLjUgMA0KdiAtMTkgLTIzLjUgMA0KdiAtMTkuNSAtMjQgMA0KdiAtMjAgLTI0IDANCnYgLTIwIC0yMy41IDANCnYgLTE5LjUgLTIzLjUgMA0KdiAtMTguNSAtMjQuNSAwDQp2IC0xOSAtMjQuNSAwDQp2IC0xOSAtMjQgMA0KdiAtMTguNSAtMjQgMA0KdiAtMTkgLTI0LjUgMA0KdiAtMTkuNSAtMjQuNSAwDQp2IC0xOS41IC0yNCAwDQp2IC0xOSAtMjQgMA0KdiAtMTkuNSAtMjQuNSAwDQp2IC0yMCAtMjQuNSAwDQp2IC0yMCAtMjQgMA0KdiAtMTkuNSAtMjQgMA0KdiAtMTguNSAtMjUgMA0KdiAtMTkgLTI1IDANCnYgLTE5IC0yNC41IDANCnYgLTE4LjUgLTI0LjUgMA0KdiAtMTkgLTI1IDANCnYgLTE5LjUgLTI1IDANCnYgLTE5LjUgLTI0LjUgMA0KdiAtMTkgLTI0LjUgMA0KdiAtMTkuNSAtMjUgMA0KdiAtMjAgLTI1IDANCnYgLTIwIC0yNC41IDANCnYgLTE5LjUgLTI0LjUgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDE2KQ0KdnQgMC4zNDM3NSAwLjU3NQ0KdnQgMC4zNTkzNzUgMC41NzUNCnZ0IDAuMzU5Mzc1IDAuNg0KdnQgMC4zNDM3NSAwLjYNCnZ0IDAuMzc1IDAuNTc1DQp2dCAwLjM3NSAwLjYNCnZ0IDAuMzkwNjI1IDAuNTc1DQp2dCAwLjM5MDYyNSAwLjYNCnZ0IDAuMzQzNzUgMC41NQ0KdnQgMC4zNTkzNzUgMC41NQ0KdnQgMC4zNzUgMC41NQ0KdnQgMC4zOTA2MjUgMC41NQ0KdnQgMC4zNDM3NSAwLjUyNQ0KdnQgMC4zNTkzNzUgMC41MjUNCnZ0IDAuMzc1IDAuNTI1DQp2dCAwLjM5MDYyNSAwLjUyNQ0KDQojIE5vcm1hbA0Kdm4gMCAwIC0xDQoNCiMgTWVzaCBkZXNjcmlwdGlvbg0KZyBCbG9jazFfbWVzaF8wMDAxDQoNCiMgRmFjZXMNCmYgMS8xLzEgMi8yLzEgMy8zLzEgNC80LzEKZiA1LzIvMSA2LzUvMSA3LzYvMSA4LzMvMQpmIDkvNS8xIDEwLzcvMSAxMS84LzEgMTIvNi8xCmYgMTMvOS8xIDE0LzEwLzEgMTUvMi8xIDE2LzEvMQpmIDE3LzEwLzEgMTgvMTEvMSAxOS81LzEgMjAvMi8xCmYgMjEvMTEvMSAyMi8xMi8xIDIzLzcvMSAyNC81LzEKZiAyNS8xMy8xIDI2LzE0LzEgMjcvMTAvMSAyOC85LzEKZiAyOS8xNC8xIDMwLzE1LzEgMzEvMTEvMSAzMi8xMC8xCmYgMzMvMTUvMSAzNC8xNi8xIDM1LzEyLzEgMzYvMTEvMQoNCg==</ImportMesh>
+  <InternalTexture assetPath="Assets/Sprites and Textures/omegateam.png" materialName="omegateam" />
+</Tiled2Unity>

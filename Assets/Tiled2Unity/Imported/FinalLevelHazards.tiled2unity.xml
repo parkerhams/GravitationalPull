@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Tiled2Unity generated xml data-->
+<!--Do not modify by hand-->
+<!--Last exported: 11/20/2017 12:04:54 PM-->
+<Tiled2Unity version="1.0.13.0">
+  <AssignMaterial mesh="FinalLevelHazards_mesh_0001" material="_SHadowSciFiTile" />
+  <Prefab name="FinalLevelHazards" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="1" numTilesWide="10" numTilesHigh="10" tileWidth="16" tileHeight="16" exportScale="0.0625" mapWidthInPixels="160" mapHeightInPixels="160" backgroundColor="#808080">
+    <GameObject name="Tile Layer 1" x="0" y="0" z="0">
+      <TileLayer offsetX="0" offsetY="0" />
+      <GameObject name="_SHadowSciFiTile" x="0" y="0" mesh="FinalLevelHazards_mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
+      <GameObject name="Collision">
+        <PolygonCollider2D>
+          <Path>5,-3 3.9375,-3 3.9375,-3.9375 5,-3.9375</Path>
+          <Path>2.9375,-4.9375 6,-4.9375 6,-4 2.9375,-4</Path>
+          <Path>5,-5 3.9375,-5 3.9375,-5.9375 5,-5.9375</Path>
+        </PolygonCollider2D>
+      </GameObject>
+    </GameObject>
+  </Prefab>
+  <ImportMesh filename="FinalLevelHazards_mesh_0001.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ0ZpbmFsTGV2ZWxIYXphcmRzX21lc2hfMDAwMS5vYmonDQoNCiMgVmVydGljZXMgKENvdW50ID0gMjApDQp2IC00IC00IDANCnYgLTUgLTQgMA0KdiAtNSAtMyAwDQp2IC00IC0zIDANCnYgLTMgLTUgMA0KdiAtNCAtNSAwDQp2IC00IC00IDANCnYgLTMgLTQgMA0KdiAtNCAtNSAwDQp2IC01IC01IDANCnYgLTUgLTQgMA0KdiAtNCAtNCAwDQp2IC01IC01IDANCnYgLTYgLTUgMA0KdiAtNiAtNCAwDQp2IC01IC00IDANCnYgLTQgLTYgMA0KdiAtNSAtNiAwDQp2IC01IC01IDANCnYgLTQgLTUgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDQpDQp2dCAwLjE1NjI1IDAuOQ0KdnQgMC4xNzE4NzUgMC45DQp2dCAwLjE3MTg3NSAwLjkyNQ0KdnQgMC4xNTYyNSAwLjkyNQ0KDQojIE5vcm1hbA0Kdm4gMCAwIC0xDQoNCiMgTWVzaCBkZXNjcmlwdGlvbg0KZyBGaW5hbExldmVsSGF6YXJkc19tZXNoXzAwMDENCg0KIyBGYWNlcw0KZiAxLzEvMSAyLzIvMSAzLzMvMSA0LzQvMQpmIDUvMS8xIDYvMi8xIDcvMy8xIDgvNC8xCmYgOS8xLzEgMTAvMi8xIDExLzMvMSAxMi80LzEKZiAxMy8xLzEgMTQvMi8xIDE1LzMvMSAxNi80LzEKZiAxNy8xLzEgMTgvMi8xIDE5LzMvMSAyMC80LzEKDQo=</ImportMesh>
+  <InternalTexture assetPath="Assets/Sprites and Textures/TileSets/_SHadowSciFiTile.png" materialName="_SHadowSciFiTile" />
+</Tiled2Unity>

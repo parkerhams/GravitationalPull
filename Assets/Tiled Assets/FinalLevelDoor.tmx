@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="2017.09.27" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" source="Sci-Fi16PX_Shadows.tsx"/>
+ <layer name="Tile Layer 1" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,0,675,675,675,675,676,0,0,0,
+0,0,739,1314,1314,1314,739,0,0,0,
+0,0,674,1314,1378,1314,674,0,0,0,
+0,0,674,1378,1314,1314,674,0,0,0,
+0,0,674,1314,1314,1314,674,0,0,0,
+0,0,738,1314,1378,1378,738,0,0,0,
+0,0,739,1378,1378,1378,739,0,0,0,
+0,0,675,676,676,676,676,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

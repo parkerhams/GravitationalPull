@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Tiled2Unity generated xml data-->
+<!--Do not modify by hand-->
+<!--Last exported: 11/20/2017 12:05:05 PM-->
+<Tiled2Unity version="1.0.13.0">
+  <AssignMaterial mesh="FinalLevelHazards3_mesh_0001" material="_SHadowSciFiTile" />
+  <Prefab name="FinalLevelHazards3" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="1" numTilesWide="10" numTilesHigh="10" tileWidth="16" tileHeight="16" exportScale="0.0625" mapWidthInPixels="160" mapHeightInPixels="160" backgroundColor="#808080">
+    <GameObject name="Tile Layer 1" x="0" y="0" z="0">
+      <TileLayer offsetX="0" offsetY="0" />
+      <GameObject name="_SHadowSciFiTile" x="0" y="0" mesh="FinalLevelHazards3_mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
+      <GameObject name="Collision">
+        <PolygonCollider2D>
+          <Path>6,-3 4.9375,-3 4.9375,-3.9375 6,-3.9375</Path>
+        </PolygonCollider2D>
+      </GameObject>
+    </GameObject>
+  </Prefab>
+  <ImportMesh filename="FinalLevelHazards3_mesh_0001.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ0ZpbmFsTGV2ZWxIYXphcmRzM19tZXNoXzAwMDEub2JqJw0KDQojIFZlcnRpY2VzIChDb3VudCA9IDQpDQp2IC01IC00IDANCnYgLTYgLTQgMA0KdiAtNiAtMyAwDQp2IC01IC0zIDANCg0KIyBUZXh0dXJlIGNvb3JpZGluYXRlcyAoQ291bnQgPSA0KQ0KdnQgMC4xNTYyNSAwLjkNCnZ0IDAuMTcxODc1IDAuOQ0KdnQgMC4xNzE4NzUgMC45MjUNCnZ0IDAuMTU2MjUgMC45MjUNCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIE1lc2ggZGVzY3JpcHRpb24NCmcgRmluYWxMZXZlbEhhemFyZHMzX21lc2hfMDAwMQ0KDQojIEZhY2VzDQpmIDEvMS8xIDIvMi8xIDMvMy8xIDQvNC8xCg0K</ImportMesh>
+  <InternalTexture assetPath="Assets/Sprites and Textures/TileSets/_SHadowSciFiTile.png" materialName="_SHadowSciFiTile" />
+</Tiled2Unity>
