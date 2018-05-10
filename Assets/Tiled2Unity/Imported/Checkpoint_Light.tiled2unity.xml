@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Tiled2Unity generated xml data-->
+<!--Do not modify by hand-->
+<!--Last exported: 5/10/2018 11:48:58 AM-->
+<Tiled2Unity version="1.0.13.0">
+  <AssignMaterial mesh="Checkpoint_Light_mesh_0001" material="_SHadowSciFiTile" />
+  <Prefab name="Checkpoint_Light" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="1" numTilesWide="5" numTilesHigh="5" tileWidth="16" tileHeight="16" exportScale="0.0625" mapWidthInPixels="80" mapHeightInPixels="80" backgroundColor="#808080">
+    <GameObject name="Tile Layer 1" x="0" y="0" z="0">
+      <TileLayer offsetX="0" offsetY="0" />
+      <GameObject name="_SHadowSciFiTile" x="0" y="0" mesh="Checkpoint_Light_mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
+    </GameObject>
+  </Prefab>
+  <ImportMesh filename="Checkpoint_Light_mesh_0001.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ0NoZWNrcG9pbnRfTGlnaHRfbWVzaF8wMDAxLm9iaicNCg0KIyBWZXJ0aWNlcyAoQ291bnQgPSAzNikNCnYgLTEgLTIgMA0KdiAtMiAtMiAwDQp2IC0yIC0xIDANCnYgLTEgLTEgMA0KdiAtMiAtMiAwDQp2IC0zIC0yIDANCnYgLTMgLTEgMA0KdiAtMiAtMSAwDQp2IC0zIC0yIDANCnYgLTQgLTIgMA0KdiAtNCAtMSAwDQp2IC0zIC0xIDANCnYgLTEgLTMgMA0KdiAtMiAtMyAwDQp2IC0yIC0yIDANCnYgLTEgLTIgMA0KdiAtMiAtMyAwDQp2IC0zIC0zIDANCnYgLTMgLTIgMA0KdiAtMiAtMiAwDQp2IC0zIC0zIDANCnYgLTQgLTMgMA0KdiAtNCAtMiAwDQp2IC0zIC0yIDANCnYgLTEgLTQgMA0KdiAtMiAtNCAwDQp2IC0yIC0zIDANCnYgLTEgLTMgMA0KdiAtMiAtNCAwDQp2IC0zIC00IDANCnYgLTMgLTMgMA0KdiAtMiAtMyAwDQp2IC0zIC00IDANCnYgLTQgLTQgMA0KdiAtNCAtMyAwDQp2IC0zIC0zIDANCg0KIyBUZXh0dXJlIGNvb3JpZGluYXRlcyAoQ291bnQgPSA4KQ0KdnQgMC4yODEyNSAwLjkNCnZ0IDAuMjk2ODc1IDAuOQ0KdnQgMC4yOTY4NzUgMC45MjUNCnZ0IDAuMjgxMjUgMC45MjUNCnZ0IDAuMzEyNSAwLjkNCnZ0IDAuMzEyNSAwLjkyNQ0KdnQgMC4yNjU2MjUgMC45DQp2dCAwLjI2NTYyNSAwLjkyNQ0KDQojIE5vcm1hbA0Kdm4gMCAwIC0xDQoNCiMgTWVzaCBkZXNjcmlwdGlvbg0KZyBDaGVja3BvaW50X0xpZ2h0X21lc2hfMDAwMQ0KDQojIEZhY2VzDQpmIDEvMS8xIDIvMi8xIDMvMy8xIDQvNC8xCmYgNS8xLzEgNi8yLzEgNy8zLzEgOC80LzEKZiA5LzIvMSAxMC81LzEgMTEvNi8xIDEyLzMvMQpmIDEzLzIvMSAxNC8zLzEgMTUvNC8xIDE2LzEvMQpmIDE3LzcvMSAxOC8xLzEgMTkvNC8xIDIwLzgvMQpmIDIxLzIvMSAyMi8zLzEgMjMvNC8xIDI0LzEvMQpmIDI1LzUvMSAyNi82LzEgMjcvMy8xIDI4LzIvMQpmIDI5LzEvMSAzMC8yLzEgMzEvMy8xIDMyLzQvMQpmIDMzLzUvMSAzNC82LzEgMzUvMy8xIDM2LzIvMQoNCg==</ImportMesh>
+  <InternalTexture assetPath="Assets/Sprites and Textures/TileSets/_SHadowSciFiTile.png" materialName="_SHadowSciFiTile" />
+</Tiled2Unity>
