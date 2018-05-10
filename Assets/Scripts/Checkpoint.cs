@@ -28,6 +28,7 @@ public class Checkpoint : MonoBehaviour
         checkpointNotificationAnim.SetBool("isPlaying", false);
         spriteRenderer = GetComponent<SpriteRenderer>();
         checkpointParticles = GetComponentInChildren<ParticleSystem>();
+        checkpointParticles.Stop();
         DeactivateCheckpoint();
     }
 

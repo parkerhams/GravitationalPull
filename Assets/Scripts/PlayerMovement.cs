@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour {
     LayerMask whatCountsAsGround;
     [SerializeField]
     private AudioSource audioSource;
+    [SerializeField]
+    private AudioSource errorAudioSource;
 
     [SerializeField]
     private float gravityChargeDecreaseRate = 0.1f;
@@ -29,11 +31,12 @@ public class PlayerMovement : MonoBehaviour {
     private float chargeMax = 100;
     private float currentChargeLevel;
     private bool isRecharging;
+    private bool canFlip = false;
 
     private float horizontalInput;
 
     private bool isOnGround;
-	private bool isOnCeiling;
+    private bool isOnCeiling;
 
     private Vector2 gravity;
 
@@ -42,6 +45,8 @@ public class PlayerMovement : MonoBehaviour {
     public bool doubleJump = false;
     Animator anim;
 
+    [SerializeField]
+    Animator sliderAnim;
 
     public bool gravitySwitch;
 
@@ -58,7 +63,10 @@ public class PlayerMovement : MonoBehaviour {
         gravity = Physics.gravity;
         anim = GetComponent<Animator>();
         anim.SetFloat("Speed", Mathf.Abs(horizontalInput));
-        //Teleports game object to new location
+
+        sliderAnim = GetComponent<Animator>();
+        sliderAnim.SetBool("canFlip", true);
+        
         myRigidbody = GetComponent<Rigidbody2D>();
         jumpForce = new Vector2(0, jumpStrength);
 
@@ -78,21 +86,25 @@ public class PlayerMovement : MonoBehaviour {
             myRigidbody.AddForce(new Vector2( 0, jumpStrength));
             audioSource.Play();
         }
-        if (Input.GetButtonDown("Jump")) //Detect if player presses space to flip gravity
+        if (currentChargeLevel > 0 && !isRecharging)
         {
-            //StartCoroutine(GravityChargeConsumptionCoroutine());
-            gravitySwitch = !gravitySwitch;
-            if (gravitySwitch)
+            //canFlip = true;
+            if (Input.GetButtonDown("Jump") || canFlip) //Detect if player presses space to flip gravity
             {
-                StartCoroutine(GravityChargeConsumptionCoroutine());
-                Physics.gravity = new Vector2(0, 20); //Invert
+                //StartCoroutine(GravityChargeConsumptionCoroutine());
+                gravitySwitch = !gravitySwitch;
+                if (gravitySwitch)
+                {
+                    StartCoroutine(GravityChargeConsumptionCoroutine());
+                    Physics.gravity = new Vector2(0, 20); //Invert
+                }
+                else if (!gravitySwitch)
+                {
+                    StartCoroutine(GravityChargeConsumptionCoroutine());
+                    Physics.gravity = new Vector2(0, -20); //Default unity
+                }
+                audioSource.Play();
             }
-            else if (!gravitySwitch)
-            {
-                StartCoroutine(GravityChargeConsumptionCoroutine());
-                Physics.gravity = new Vector2(0, -20); //Default unity
-            }
-            audioSource.Play();
         }
         UpdateGUICharge();
 
@@ -102,7 +114,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if(currentChargeLevel <= 0)
         {
-            StartCoroutine(ChargeDepleteRechargeCoroutine());
+            //StartCoroutine(ChargeDepleteRechargeCoroutine());
         }
     }
 
@@ -133,9 +145,17 @@ public class PlayerMovement : MonoBehaviour {
         shouldJump = true;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Coin")
+        {
+            currentChargeLevel = chargeMax;
+        }
+    }
+
     private void PlayerTurnsRedWhenOutofGravity()
     {
-        if(isRecharging)
+        if(currentChargeLevel == 0)
         {
             spriteRenderer.color = Color.red;
         }
@@ -145,24 +165,46 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
+    private IEnumerator SliderTurnsRedIfCannotFlip()
+    {
+        if(!canFlip)
+        {
+            sliderAnim.SetBool("canFlip", false);
+            yield return new WaitForSeconds(2f);
+            //sliderAnim.SetBool("canFlip", true);
+        }
+    }
+
     private void GravityReverse()
 	{
-
-        if (Input.GetButtonDown("Jump"))
+        if (canFlip)
         {
-            myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, myRigidbody.velocity.y * 0.6f);
-            myRigidbody.gravityScale *= -1;
-            jumpForce = jumpForce * -1;
+            if (Input.GetButtonDown("Jump"))
+            {
+                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, myRigidbody.velocity.y * 0.6f);
+                myRigidbody.gravityScale *= -1;
+                jumpForce = jumpForce * -1;
 
-            myRigidbody.AddForce(jumpForce, ForceMode2D.Impulse);
+                myRigidbody.AddForce(jumpForce, ForceMode2D.Impulse);
 
-            //facingRight = !facingRight;
-            Vector3 theScale = transform.localScale;
-            theScale.y *= -1;
-            transform.localScale = theScale;
-            StartCoroutine(GravityChargeConsumptionCoroutine());
-            audioSource.Play();
+                //facingRight = !facingRight;
+                Vector3 theScale = transform.localScale;
+                theScale.y *= -1;
+                transform.localScale = theScale;
+                StartCoroutine(GravityChargeConsumptionCoroutine());
+                audioSource.Play();
 
+            }
+        }
+        else
+        {
+            if(Input.GetButtonDown("Jump"))
+            {
+                //sliderAnim.SetBool("canFlip", true);
+                StartCoroutine(SliderTurnsRedIfCannotFlip());
+                errorAudioSource.Play();
+                sliderAnim.SetBool("canFlip", true);
+            }    
         }
     }
 
