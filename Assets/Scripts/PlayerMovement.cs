@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (currentChargeLevel > 0 && !isRecharging)
         {
-            //canFlip = true;
+            canFlip = true;
             if (Input.GetButtonDown("Jump") || canFlip) //Detect if player presses space to flip gravity
             {
                 //StartCoroutine(GravityChargeConsumptionCoroutine());
