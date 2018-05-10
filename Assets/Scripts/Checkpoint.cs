@@ -27,6 +27,7 @@ public class Checkpoint : MonoBehaviour
     {
         checkpointNotificationAnim.SetBool("isPlaying", false);
         spriteRenderer = GetComponent<SpriteRenderer>();
+        checkpointParticles = GetComponentInChildren<ParticleSystem>();
         DeactivateCheckpoint();
     }
 
@@ -59,7 +60,8 @@ public class Checkpoint : MonoBehaviour
         currentlyActiveCheckpoint = this;
         Instantiate(checkpointParticles, transform.position, Quaternion.identity);
         StartCoroutine(CallCheckpointTextAnim());
-        StartCoroutine(ParticleEffectStopPlaying());
+        //StartCoroutine(ParticleEffectStopPlaying());
+        checkpointParticles.Play();
         transform.localScale = Vector3.one * activatedScale;
         spriteRenderer.color = activatedColor;
     }
