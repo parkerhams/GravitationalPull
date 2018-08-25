@@ -24,7 +24,7 @@ public class SceneMover : MonoBehaviour
 
     public void ContinueButtonClicked()
     {
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("Wake");
     }
 
     public void CreditsButtonClicked()

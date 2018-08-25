@@ -14,6 +14,7 @@ public class DialogueTrigger : MonoBehaviour {
     private void Start()
     {
         continueButton.SetActive(false);
+
     }
 
     public void TriggerDialogue ()
